@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import org.json.JSONException;
 import android.content.Context;
 import android.widget.Toast;
+import android.os.RemoteException;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -24,6 +25,7 @@ import com.usdk.apiservice.aidl.printer.ECLevel;
 import com.usdk.apiservice.aidl.printer.HZScale;
 import com.usdk.apiservice.aidl.printer.HZSize;
 import com.usdk.apiservice.aidl.printer.UPrinter;
+import com.usdk.apiservice.aidl.printer.OnPrintListener;
 
 public class Ingenicoa8posprinter extends CordovaPlugin {
 	

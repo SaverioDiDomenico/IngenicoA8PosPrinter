@@ -1,4 +1,4 @@
-package android;
+package it.dynamicid;
 
 import com.google.gson.Gson;
 

@@ -67,7 +67,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 	*/
 
 	private void print(String json_list, CallbackContext callbackContext) {
-		String result = "KO";
+		String result = "OK";
 		try {
 			Context context = this.cordova.getActivity().getApplicationContext();
 			UPrinter printer = DeviceHelper.me().getPrinter();
@@ -235,12 +235,12 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			printer.startPrint(new OnPrintListener.Stub() {
 				@Override
 				public void onFinish() throws RemoteException {
-					result = "OK";
+					//result = "OK";
 				}
 
 				@Override
 				public void onError(int error) throws RemoteException {
-					result = "Errore: " + error;
+					//result = "Errore: " + error;
 				}
 			});
 

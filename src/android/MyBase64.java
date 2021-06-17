@@ -1,4 +1,4 @@
-package android;
+package it.dynamicid;
 
 public class MyBase64 {
 	private final static char[] ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();

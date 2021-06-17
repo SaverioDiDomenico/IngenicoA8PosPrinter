@@ -23,6 +23,7 @@
 		<source-file src="src/android/PrintData.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
 	    	<source-file src="src/android/DemoConfig.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
 		<source-file src="src/android/SpinnerItem.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
+	        <source-file src="src/android/LogUtil.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
 	    	<lib-file src="src/usdk_api_aidl_v12.0.0.20200707.jar" />
 		<lib-file src="src/gson-2.6.2.jar" />
     </platform>

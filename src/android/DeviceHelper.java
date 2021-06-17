@@ -1,4 +1,4 @@
-package android;
+package it.dynamicid;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -81,9 +81,9 @@ import com.usdk.apiservice.aidl.tms.UTMS;
  */
 public final class DeviceHelper implements ServiceConnection {
 	private static final String TAG = "DeviceHelper";
-	// æœ€å¤§é‡�ç»‘å®šæ¬¡æ•°
+
 	private static final int MAX_RETRY_COUNT = 3;
-	// é‡�ç»‘å®šé—´éš”æ—¶é—´
+
 	private static final long RETRY_INTERVALS = 3000;
 
 	private static DeviceHelper me = new DeviceHelper();
@@ -119,7 +119,6 @@ public final class DeviceHelper implements ServiceConnection {
 		service.setPackage("com.usdk.apiservice");
 		boolean bindSucc = context.bindService(service, me, Context.BIND_AUTO_CREATE);
 
-		// ç»‘å®šå¤±è´¥, åˆ™é‡�æ–°ç»‘å®š
 		if (!bindSucc && retry++ < MAX_RETRY_COUNT) {
 			Log.e(TAG, "=> bind fail, rebind (" + retry +")");
 			new Handler().postDelayed(new Runnable() {
@@ -759,9 +758,7 @@ public final class DeviceHelper implements ServiceConnection {
 		abstract IBinder create() throws RemoteException;
 	}
 
-	/**
-	 * æœ�åŠ¡å°±ç»ªç›‘å�¬å™¨
-	 */
+
 	public interface ServiceReadyListener {
 		void onReady(String version);
 	}

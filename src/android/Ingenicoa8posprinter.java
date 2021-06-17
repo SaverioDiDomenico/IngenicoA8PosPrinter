@@ -72,7 +72,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 		try {
 			Context context = this.cordova.getActivity().getApplicationContext();
 			UPrinter printer = DeviceHelper.me().getPrinter();
-			Toast.makeText(webView.getContext(), printer, Toast.LENGTH_LONG).show();
+			
 			//int validWidth = printer.getValidWidth();
 			//List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
 			//int sheetNum = sheetNumList.get(0); //verificare se si può rimuovere

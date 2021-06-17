@@ -16,16 +16,17 @@ import java.util.List;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-
-import com.usdk.apiservice.aidl.digled.Align;
-import com.usdk.apiservice.aidl.printer.ASCScale;
 import com.usdk.apiservice.aidl.printer.ASCSize;
 import com.usdk.apiservice.aidl.printer.AlignMode;
 import com.usdk.apiservice.aidl.printer.ECLevel;
+import com.usdk.apiservice.aidl.printer.FactorMode;
 import com.usdk.apiservice.aidl.printer.HZScale;
 import com.usdk.apiservice.aidl.printer.HZSize;
-import com.usdk.apiservice.aidl.printer.UPrinter;
 import com.usdk.apiservice.aidl.printer.OnPrintListener;
+import com.usdk.apiservice.aidl.printer.PrintFormat;
+import com.usdk.apiservice.aidl.printer.PrinterData;
+import com.usdk.apiservice.aidl.printer.PrinterError;
+import com.usdk.apiservice.aidl.printer.UPrinter;
 
 public class Ingenicoa8posprinter extends CordovaPlugin {
 	

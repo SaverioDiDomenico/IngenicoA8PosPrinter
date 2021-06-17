@@ -1,13 +1,15 @@
 package android;
 
-import java.awt.image.BufferedImage;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import javax.imageio.ImageIO;
+
 
 import com.usdk.apiservice.aidl.digled.Align;
 import com.usdk.apiservice.aidl.printer.ASCScale;
@@ -60,7 +62,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			UPrinter printer = DeviceHelper.me().getPrinter();
 			int validWidth = printer.getValidWidth();
 			List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
-			int sheetNum = sheetNumList.get(0);
+			int sheetNum = sheetNumList.get(0); //verificare se si può rimuovere
 
 			json_list = json_list.replaceAll("\\[", "").replaceAll("\\]", "");
 			String jl[] = json_list.split("~~~");
@@ -240,22 +242,5 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 
 	}
 
-
-	public static BufferedImage decodeToImage(String imageString) {
-		BufferedImage image = null;
-		byte[] imageByte;
-		try {
-			BASE64Decoder decoder = new BASE64Decoder();
-			imageByte = decoder.decodeBuffer(imageString);
-			ByteArrayInputStream bis = new ByteArrayInputStream(imageByte);
-			image = ImageIO.read(bis);
-			bis.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			
-		}
-		return image;
-
-	}
 
 }

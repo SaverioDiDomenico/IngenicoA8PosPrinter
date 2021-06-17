@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-ingenicoa8posprinter",
+  "version": "0.0.1",
+  "description": "Cordova Ingenico A8 Pos Printer Plugin",
+  "cordova": {
+    "id": "cordova-plugin-ingenicoa8posprinter",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaverioDiDomenico/cordova-plugin-ingenicoa8posprinter.git"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ingenico",
+    "pos",
+    "printer",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Saverio Di Domenico",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/SaverioDiDomenico/cordova-plugin-ingenicoa8posprinter/issues"
+  },
+  "homepage": "https://github.com/SaverioDiDomenico/cordova-plugin-ingenicoa8posprinter#readme"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="cordova-plugin-ingenicoa8posprinter" version="0.0.1">
+        <name>Ingenicoa8posprinter</name>
+        <description>Cordova Ingenico A8 Pos Printer Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,device,ingenico,a8,pos,printer</keywords>
+		<engines>
+			<engine name="cordova" version=">=3.0.0" />
+		</engines>
+        <js-module src="www/Ingenicoa8posprinter.js" name="Ingenicoa8posprinter">
+            <clobbers target="Ingenicoa8posprinter" />
+        </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Ingenicoa8posprinter">
+                <param name="android-package" value="it.dynamicid.Ingenicoa8posprinter"/>
+            </feature>
+        </config-file>
+	    	<source-file src="src/android/Ingenicoa8posprinter.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
+	    	<source-file src="src/android/DeviceHelper.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
+			<source-file src="src/android/MyBase64.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
+			<source-file src="src/android/PrintData.java" target-dir="src/it/dynamicid/ingenicoa8posprinter" />
+	    	<lib-file src="src/usdk_api_aidl_v12.0.0.20200707.jar" />
+			<lib-file src="src/gson-2.6.2.jar" />
+    </platform>
+    </plugin>
+	

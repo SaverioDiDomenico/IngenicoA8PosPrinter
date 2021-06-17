@@ -16,6 +16,9 @@ import java.util.List;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
+
+import com.usdk.apiservice.aidl.digled.Align;
+import com.usdk.apiservice.aidl.printer.ASCScale;
 import com.usdk.apiservice.aidl.printer.ASCSize;
 import com.usdk.apiservice.aidl.printer.AlignMode;
 import com.usdk.apiservice.aidl.printer.ECLevel;

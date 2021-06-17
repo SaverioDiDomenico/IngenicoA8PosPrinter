@@ -37,8 +37,6 @@ import com.usdk.apiservice.aidl.printer.UPrinter;
 import com.usdk.apiservice.aidl.constants.RFDeviceName;
 import com.usdk.apiservice.aidl.pinpad.DeviceName;
 
-import cn.eas.usdk.demo.constant.DemoConfig;
-import cn.eas.usdk.demo.util.LogUtil;
 
 public class Ingenicoa8posprinter extends CordovaPlugin {
 	

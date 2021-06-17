@@ -70,8 +70,11 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 	private void print(String json_list, CallbackContext callbackContext) {
 		String result = "OK";
 		try {
+			Toast.makeText(webView.getContext(), "0", Toast.LENGTH_LONG).show();
 			Context context = this.cordova.getActivity().getApplicationContext();
+			Toast.makeText(webView.getContext(), "1", Toast.LENGTH_LONG).show();
 			UPrinter printer = DeviceHelper.me().getPrinter();
+			Toast.makeText(webView.getContext(), "2", Toast.LENGTH_LONG).show();
 			
 			//int validWidth = printer.getValidWidth();
 			//List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));

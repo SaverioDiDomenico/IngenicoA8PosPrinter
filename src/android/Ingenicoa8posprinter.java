@@ -43,7 +43,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			Context context = this.cordova.getActivity().getApplicationContext();							
 			this.printer = DeviceHelper.me().getPrinter();
 			this.validWidth = this.printer.getValidWidth();
-			sheetNum = sheetNumList.get(0); //verificare se si può rimuovere
+			sheetNum = sheetNumList.get(0); //verificare se si puÃ² rimuovere
 
 		} catch (Exception e) {
 			callbackContext.error(e.toString());
@@ -60,7 +60,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			UPrinter printer = DeviceHelper.me().getPrinter();
 			int validWidth = printer.getValidWidth();
 			List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
-			int sheetNum = sheetNumList.get(0); //verificare se si può rimuovere
+			int sheetNum = sheetNumList.get(0);
 
 			json_list = json_list.replaceAll("\\[", "").replaceAll("\\]", "");
 			String jl[] = json_list.split("~~~");

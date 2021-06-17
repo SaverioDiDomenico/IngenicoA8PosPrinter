@@ -9,6 +9,7 @@ import android.content.Context;
 import android.widget.Toast;
 import android.os.RemoteException;
 
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -71,9 +72,10 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 		try {
 			Context context = this.cordova.getActivity().getApplicationContext();
 			UPrinter printer = DeviceHelper.me().getPrinter();
-			int validWidth = printer.getValidWidth();
-			List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
-			int sheetNum = sheetNumList.get(0); //verificare se si può rimuovere
+			Toast.makeText(webView.getContext(), printer, Toast.LENGTH_LONG).show();
+			//int validWidth = printer.getValidWidth();
+			//List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
+			//int sheetNum = sheetNumList.get(0); //verificare se si può rimuovere
 
 			json_list = json_list.replaceAll("\\[", "").replaceAll("\\]", "");
 			String jl[] = json_list.split("~~~");
@@ -81,7 +83,9 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			for(int i=0; i<jl.length; i++) {
 
 				String json = jl[i];
-				System.out.println(json);
+				//System.out.println(json);
+				Toast.makeText(webView.getContext(), json, Toast.LENGTH_LONG).show();
+				
 
 				PrintData pd = PrintData.ElaborateJson(json);			 
 				String type = pd.getType();	
@@ -126,11 +130,11 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 					try {
 						int offset = Integer.parseInt(pd.getImageOffset());				 
 						byte[] image = MyBase64.decode(data);
-						System.out.println("TEST");
+						//System.out.println("TEST");
 
 						printer.addBmpImage(offset, FactorMode.BMP1X1, image);
 					}catch (Exception e) {
-						System.out.println(e);
+						//System.out.println(e);
 					}
 				}else if(type.equalsIgnoreCase("text")) {
 

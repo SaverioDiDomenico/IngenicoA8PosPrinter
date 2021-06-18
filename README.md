@@ -32,7 +32,7 @@ Whit this plugin it's possible to Print whit Ingenico POS A8 model.
 
 ## print
 
-json objects are separated by "3 ~", see example below or DemoCall.js file.
+Can print a List of json objects that are separated by "~~~", see example below or DemoCall.js file.
 
     var json_list = "{\"type\":\"qr\", \"data\": \"www.dynamic-id.it\", \"qrAlign\": \"center\", \"qrHeight\": \"240\" }";
     json_list += "~~~";

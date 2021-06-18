@@ -38,7 +38,7 @@ import com.usdk.apiservice.aidl.constants.RFDeviceName;
 import com.usdk.apiservice.aidl.pinpad.DeviceName;
 
 
-public class Ingenicoa8posprinter extends CordovaPlugin {
+public class Ingenicoa8posprinter extends CordovaPlugin implements DeviceHelper.ServiceReadyListener {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -49,6 +49,13 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 
 		return false;
 	}
+	
+	@Override
+    public void onReady(String version) {
+
+        DeviceHelper.me().register(true);
+    }
+	
 
 	/*
 	private static final List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
@@ -63,7 +70,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			Context context = this.cordova.getActivity().getApplicationContext();							
 			this.printer = DeviceHelper.me().getPrinter();
 			this.validWidth = this.printer.getValidWidth();
-			sheetNum = sheetNumList.get(0); //verificare se si puÃ² rimuovere
+			sheetNum = sheetNumList.get(0); //verificare se si puÃƒÂ² rimuovere
 
 		} catch (Exception e) {
 			callbackContext.error(e.toString());
@@ -84,29 +91,30 @@ public class Ingenicoa8posprinter extends CordovaPlugin {
 			DemoConfig.RF_DEVICE_NAME = RFDeviceName.INNER;
 		}
 			
-			Toast.makeText(webView.getContext(), "0", Toast.LENGTH_LONG).show();
+			//Toast.makeText(webView.getContext(), "0", Toast.LENGTH_LONG).show();
 			Context context = this.cordova.getActivity().getApplicationContext();
-			Toast.makeText(webView.getContext(), "1", Toast.LENGTH_LONG).show();
-			
-			DeviceHelper.me().init(this.cordova.getActivity().getApplication());
+			//Toast.makeText(webView.getContext(), "1", Toast.LENGTH_LONG).show();			
+			DeviceHelper.me().init(this.cordova.getActivity().getApplicationContext());
+			//Toast.makeText(webView.getContext(), "2", Toast.LENGTH_LONG).show();
 			DeviceHelper.me().bindService();
-			
-			
+			//Toast.makeText(webView.getContext(), "3", Toast.LENGTH_LONG).show();
+			DeviceHelper.me().setServiceListener(this);
+			Thread.sleep(1000);
 			UPrinter printer = DeviceHelper.me().getPrinter();
-			Toast.makeText(webView.getContext(), "2", Toast.LENGTH_LONG).show();
+			//Toast.makeText(webView.getContext(), "4", Toast.LENGTH_LONG).show();
 
 			//int validWidth = printer.getValidWidth();
 			//List<Integer> sheetNumList = new LinkedList<>(Arrays.asList(1, 2, 3));
-			//int sheetNum = sheetNumList.get(0); //verificare se si puÃ² rimuovere
+			//int sheetNum = sheetNumList.get(0); //verificare se si puÃƒÂ² rimuovere
 
-			json_list = json_list.replaceAll("\\[", "").replaceAll("\\]", "");
+			//json_list = json_list.replaceAll("\\[", "").replaceAll("\\]", "");
 			String jl[] = json_list.split("~~~");
 
 			for(int i=0; i<jl.length; i++) {
 
 				String json = jl[i];
 				//System.out.println(json);
-				Toast.makeText(webView.getContext(), json, Toast.LENGTH_LONG).show();
+				//Toast.makeText(webView.getContext(), json, Toast.LENGTH_LONG).show();
 				
 
 				PrintData pd = PrintData.ElaborateJson(json);			 

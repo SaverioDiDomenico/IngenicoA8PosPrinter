@@ -41,7 +41,8 @@ json_list += "~~~";
 json_list += "{\"type\":\"image\", \"data\": \"BASE64IMAGE", \"imageOffset\": \"0\" }";
 json_list += "~~~";
 json_list += "{\"type\":\"text\", \"data\": \"www.dynamic-id.it\", \"textAlign\": \"center\", \"textAscScale\": \"2x2\", \"textHzScale\": \"2x2\", \"textAscSize\": \"24x12\", \"textHzSize\": \"24x24\" }";
-		
+
+
 
 
 # Credits

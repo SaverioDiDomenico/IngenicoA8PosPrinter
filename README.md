@@ -74,7 +74,8 @@ Json must contain these fields:
 - textHzSize = possible values 16x16, 24x16, 24x24, 32x24
 
 Print Function
-function PosPrint(json_data){
+
+	function PosPrint(json_data){
 	
 	//White Spaces after Print
 	json_data += "~~~";

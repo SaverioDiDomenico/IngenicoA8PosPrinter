@@ -73,6 +73,30 @@ Json must contain these fields:
 - textHzScale = possible values 1x1, 1x2, 1x3, 2x1, 2x2, 2x3, 3x1, 3x2, 3x3
 - textHzSize = possible values 16x16, 24x16, 24x24, 32x24
 
+Print Function
+function PosPrint(json_data){
+	
+	//White Spaces after Print
+	json_data += "~~~";
+	json_data += "{\"type\":\"text\", \"data\": \"\", \"textAlign\": \"center\", \"textAscScale\": \"3x3\", \"textHzScale\": \"3x3\", \"textAscSize\": \"32x12\", \"textHzSize\": \"32x24\" }";	
+	json_data += "~~~";
+	json_data += "{\"type\":\"text\", \"data\": \"\", \"textAlign\": \"center\", \"textAscScale\": \"3x3\", \"textHzScale\": \"3x3\", \"textAscSize\": \"32x12\", \"textHzSize\": \"32x24\" }";		
+	json_data += "~~~";
+	json_data += "{\"type\":\"text\", \"data\": \"\", \"textAlign\": \"center\", \"textAscScale\": \"3x3\", \"textHzScale\": \"3x3\", \"textAscSize\": \"32x12\", \"textHzSize\": \"32x24\" }";	
+		
+    ipp.print(
+                json_data,
+                function(msg) {
+                    console.log(msg);
+                },
+                function(err) {
+                    console.log(err);
+                }
+            );
+	
+	
+}
+
 
 # Credits
 

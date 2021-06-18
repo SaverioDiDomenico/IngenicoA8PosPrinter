@@ -143,7 +143,7 @@ public class Ingenicoa8posprinter extends CordovaPlugin implements DeviceHelper.
 						align = AlignMode.RIGHT;
 					}
 
-					int size1 = Integer.parseInt(pd.getBarcodeWith());
+					int size1 = Integer.parseInt(pd.getBarcodeWidth());
 					int size2 = Integer.parseInt(pd.getBarcodeHeight());
 
 					if(size1>8) {

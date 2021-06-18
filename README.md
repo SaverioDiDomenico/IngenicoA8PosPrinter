@@ -36,7 +36,7 @@ Can print a List of json objects that are separated by "~~~", see example below 
 
     var json_list = "{\"type\":\"qr\", \"data\": \"www.dynamic-id.it\", \"qrAlign\": \"center\", \"qrHeight\": \"240\" }";
     json_list += "~~~";
-    json_list += "{\"type\":\"barcode\", \"data\": \"1234567890ABCDEF\", \"barcodeAlign\": \"center\", \"barcodeHeight\": \"64\", \"barcodeWith\": \"2\" }";
+    json_list += "{\"type\":\"barcode\", \"data\": \"1234567890ABCDEF\", \"barcodeAlign\": \"center\", \"barcodeHeight\": \"64\", \"barcodeWidth\": \"2\" }";
     json_list += "~~~";
     json_list += "{\"type\":\"image\", \"data\": \"BASE64IMAGE", \"imageOffset\": \"0\" }";
     json_list += "~~~";

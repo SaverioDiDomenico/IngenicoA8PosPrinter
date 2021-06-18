@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.usdk.apiservice.aidl.DeviceServiceData;
 import com.usdk.apiservice.aidl.UDeviceService;
@@ -101,6 +102,7 @@ public final class DeviceHelper implements ServiceConnection {
 
 	public void init(Context context) {
 		this.context = context;
+		//Toast.makeText(this.context, "Init", Toast.LENGTH_LONG).show();
 	}
 
 	public void setServiceListener(ServiceReadyListener listener) {
@@ -118,6 +120,7 @@ public final class DeviceHelper implements ServiceConnection {
 		Intent service = new Intent("com.usdk.apiservice");
 		service.setPackage("com.usdk.apiservice");
 		boolean bindSucc = context.bindService(service, me, Context.BIND_AUTO_CREATE);
+		//Toast.makeText(this.context, bindSucc + "", Toast.LENGTH_LONG).show();
 
 		if (!bindSucc && retry++ < MAX_RETRY_COUNT) {
 			Log.e(TAG, "=> bind fail, rebind (" + retry +")");
@@ -408,12 +411,15 @@ public final class DeviceHelper implements ServiceConnection {
 	}
 
 	public UPrinter getPrinter() throws IllegalStateException {
+		//Toast.makeText(this.context, "GetPrinter1", Toast.LENGTH_LONG).show();
 		IBinder iBinder = new IBinderCreator(){
 			@Override
 			IBinder create() throws RemoteException {
+				
 				return deviceService.getPrinter();
 			}
 		}.start();
+		//Toast.makeText(this.context, "GetPrinter3", Toast.LENGTH_LONG).show();
 		return UPrinter.Stub.asInterface(iBinder);
 	}
 

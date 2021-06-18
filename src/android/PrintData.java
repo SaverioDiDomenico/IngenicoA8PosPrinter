@@ -21,7 +21,7 @@ public class PrintData {
 	//Barcode Properties
 	private String barcodeAlign;	//center, left, right
 	private String barcodeHeight;	//[1-320]
-	private String barcodeWith;		//[1-8]
+	private String barcodeWidth;		//[1-8]
 	
 	
 	//Image Properties (must be BMP max width 384Pix)
@@ -34,7 +34,7 @@ public class PrintData {
 
 	public PrintData(String type, String data, String textAlign, String textAscScale, String textAscSize,
 			String textHzScale, String textHzSize, String qrAlign, String qrHeight, String barcodeAlign,
-			String barcodeHeight, String barcodeWith, String imageOffset) {
+			String barcodeHeight, String barcodeWidth, String imageOffset) {
 		super();
 		this.type = type;
 		this.data = data;
@@ -47,7 +47,7 @@ public class PrintData {
 		this.qrHeight = qrHeight;
 		this.barcodeAlign = barcodeAlign;
 		this.barcodeHeight = barcodeHeight;
-		this.barcodeWith = barcodeWith;
+		this.barcodeWidth = barcodeWidth;
 		this.imageOffset = imageOffset;
 	}
 
@@ -162,13 +162,13 @@ public class PrintData {
 	}
 
 
-	public String getBarcodeWith() {
-		return barcodeWith;
+	public String getBarcodeWidth() {
+		return barcodeWidth;
 	}
 
 
-	public void setBarcodeWith(String barcodeWith) {
-		this.barcodeWith = barcodeWith;
+	public void setBarcodeWidth(String barcodeWidth) {
+		this.barcodeWidth = barcodeWidth;
 	}
 
 

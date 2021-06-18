@@ -42,6 +42,13 @@ Can print a List of json objects that are separated by "~~~", see example below 
     json_list += "~~~";
     json_list += "{\"type\":\"text\", \"data\": \"www.dynamic-id.it\", \"textAlign\": \"center\", \"textAscScale\": \"2x2\", \"textHzScale\": \"2x2\", \"textAscSize\": \"24x12\", \"textHzSize\": \"24x24\" }";
 
+To Print a QrCode
+Json must contain these fields:
+- type = qr
+- data = INFORMATION YOU WANT TO PRINT (for example a web link)
+- qrAlign = center | left | right
+- qrHeight = height in px (for example 240)
+
 
 
 
